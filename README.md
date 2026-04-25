@@ -1,82 +1,105 @@
 # Zsh Bootstrap
 
-  A one-shot bootstrap script for Linux that sets up a complete terminal environment with:
+A one-shot bootstrap script for Linux that sets up a complete terminal environment with:
 
-  - Zsh
-  - Starship prompt
-  - `zsh-autosuggestions`
-  - `zsh-syntax-highlighting`
-  - `zsh-completions`
-  - JetBrainsMono Nerd Font
-  - A ready-to-use `.zshrc`
-  - Automatic terminal font setup where possible
+- Zsh
+- Starship prompt
+- `zsh-autosuggestions`
+- `zsh-syntax-highlighting`
+- `zsh-completions`
+- JetBrainsMono Nerd Font
+- A ready-to-use `.zshrc`
+- Automatic terminal font setup where possible
 
-  ## Supported package managers
+## Preview
 
-  This script currently supports:
+### Fastfetch
 
-  - `apt`
-  - `dnf`
-  - `pacman`
-  - `zypper`
+![Fastfetch](screenshot/1%20Fastfetch.png)
 
-  ## What this script does
+### Autosuggestion
 
-  The script will:
+![Autosuggestion](screenshot/2%20auto-cmplete.png)
 
-  1. Install required packages
-  2. Install Starship
-  3. Install Zsh plugins
-  4. Install JetBrainsMono Nerd Font
-  5. Generate a fresh `~/.zshrc`
-  6. Generate `~/.config/starship.toml`
-  7. Try to apply Nerd Font settings to supported terminal emulators
-  8. Set Zsh as the default shell
+### Result
 
-  ## Installation
+![Result](screenshot/3%20result.png)
 
-  Clone the repository:
+## Supported package managers
 
-  ```bash
-  git clone https://github.com/yudiiansyaah/dotfiles-zsh.git
-  cd dotfiles-zsh
+This script currently supports:
 
-  Run the bootstrap script:
+- `apt`
+- `dnf`
+- `pacman`
+- `zypper`
 
-  chmod +x setup/bootstrap-zsh-full.sh
-  ./setup/bootstrap-zsh-full.sh
+## What this script does
 
-  Reload your shell:
+The script will:
 
-  exec zsh
+1. Install required packages
+2. Install Starship
+3. Install Zsh plugins
+4. Install JetBrainsMono Nerd Font
+5. Generate a fresh `~/.zshrc`
+6. Generate `~/.config/starship.toml`
+7. Try to apply Nerd Font settings to supported terminal emulators
+8. Set Zsh as the default shell
 
-  ## Notes
+## Installation
 
-  - The script is safe to run more than once.
-  - Your existing ~/.zshrc will be backed up automatically before being replaced.
-  - If icons still look broken, manually set your terminal font to:
+Clone the repository:
 
-  JetBrainsMono Nerd Font
+```bash
+git clone https://github.com/yudiiansyaah/dotfiles-zsh.git
+cd dotfiles-zsh
+```
 
-  ## Terminals with automatic font configuration
+Run the bootstrap script:
 
-  The script attempts to apply font settings for:
+```bash
+chmod +x setup/bootstrap-zsh-full.sh
+./setup/bootstrap-zsh-full.sh
+```
 
-  - GNOME Terminal
-  - Konsole
-  - Kitty
-  - Alacritty
-  - WezTerm
+Reload your shell:
 
-  Some terminals may still require a full restart before the font change appears.
+```bash
+exec zsh
+```
 
-  ## Repository structure
+## Notes
 
-  dotfiles-zsh/
-  ├── README.md
-  └── setup/
-      └── bootstrap-zsh-full.sh
+- The script is safe to run more than once.
+- Your existing `~/.zshrc` will be backed up automatically before being replaced.
+- If icons still look broken, manually set your terminal font to `JetBrainsMono Nerd Font`.
 
-  ## License
+## Terminals with automatic font configuration
 
-  Feel free to use, modify, and share this project.
+The script attempts to apply font settings for:
+
+- GNOME Terminal
+- Konsole
+- Kitty
+- Alacritty
+- WezTerm
+
+Some terminals may still require a full restart before the font change appears.
+
+## Repository structure
+
+```text
+dotfiles-zsh/
+├── README.md
+├── screenshot/
+│   ├── 1 Fastfetch.png
+│   ├── 2 auto-cmplete.png
+│   └── 3 result.png
+└── setup/
+    └── bootstrap-zsh-full.sh
+```
+
+## License
+
+Feel free to use, modify, and share this project.
