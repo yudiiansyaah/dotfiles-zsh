@@ -1,44 +1,82 @@
 # Zsh Bootstrap
 
-  Script sekali jalan untuk setup terminal Linux:
+  A one-shot bootstrap script for Linux that sets up a complete terminal environment with:
 
-  - `zsh`
-  - `starship`
+  - Zsh
+  - Starship prompt
   - `zsh-autosuggestions`
   - `zsh-syntax-highlighting`
   - `zsh-completions`
-  - `JetBrainsMono Nerd Font`
-  - `.zshrc`
-  - tema `starship`
-  - apply font ke terminal umum kalau memungkinkan
+  - JetBrainsMono Nerd Font
+  - A ready-to-use `.zshrc`
+  - Automatic terminal font setup where possible
 
-  ## Cara pakai
+  ## Supported package managers
 
-  ### 1. Clone repo
+  This script currently supports:
+
+  - `apt`
+  - `dnf`
+  - `pacman`
+  - `zypper`
+
+  ## What this script does
+
+  The script will:
+
+  1. Install required packages
+  2. Install Starship
+  3. Install Zsh plugins
+  4. Install JetBrainsMono Nerd Font
+  5. Generate a fresh `~/.zshrc`
+  6. Generate `~/.config/starship.toml`
+  7. Try to apply Nerd Font settings to supported terminal emulators
+  8. Set Zsh as the default shell
+
+  ## Installation
+
+  Clone the repository:
+
   ```bash
   git clone https://github.com/yudiiansyaah/dotfiles-zsh.git
   cd dotfiles-zsh
 
-  ### 2. Jalankan script
+  Run the bootstrap script:
 
   chmod +x setup/bootstrap-zsh-full.sh
   ./setup/bootstrap-zsh-full.sh
 
-  ### 3. Reload shell
+  Reload your shell:
 
   exec zsh
 
-  ## Catatan
+  ## Notes
 
-  - Script akan deteksi package manager: apt, dnf, pacman, atau zypper.
-  - Script aman dijalankan ulang.
-  - Script akan backup ~/.zshrc lama sebelum replace.
-  - Jika icon prompt masih rusak, ubah font terminal ke JetBrainsMono Nerd Font.
+  - The script is safe to run more than once.
+  - Your existing ~/.zshrc will be backed up automatically before being replaced.
+  - If icons still look broken, manually set your terminal font to:
 
-  ## Terminal yang dicoba di-apply otomatis
+  JetBrainsMono Nerd Font
+
+  ## Terminals with automatic font configuration
+
+  The script attempts to apply font settings for:
 
   - GNOME Terminal
   - Konsole
   - Kitty
   - Alacritty
   - WezTerm
+
+  Some terminals may still require a full restart before the font change appears.
+
+  ## Repository structure
+
+  dotfiles-zsh/
+  ├── README.md
+  └── setup/
+      └── bootstrap-zsh-full.sh
+
+  ## License
+
+  Feel free to use, modify, and share this project.
